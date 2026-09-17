@@ -10,6 +10,10 @@ endif()
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+IF(NOT CMAKE_BUILD_TYPE)
+  SET(CMAKE_BUILD_TYPE Release)
+ENDIF(NOT CMAKE_BUILD_TYPE)
+
 # ---------------------------------------------------------------------------
 # 1. Collect all source and header files recursively
 # ---------------------------------------------------------------------------
@@ -83,7 +87,7 @@ endforeach()
 # ---------------------------------------------------------------------------
 # 3. Target Definition & Configuration
 # ---------------------------------------------------------------------------
-add_library(CleanPhysX ${PHYSX_SOURCES})
+add_library(CleanPhysX STATIC ${PHYSX_SOURCES})
 
 target_include_directories(CleanPhysX
     PUBLIC ${PHYSX_PUBLIC_INCLUDES}
