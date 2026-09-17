@@ -1,76 +1,41 @@
-# NVIDIA PhysX
+# NVIDIA PhysX SDK 5
 
-<details>
-<summary>Copyright & License</summary>
+Copyright (c) 2008-2026 NVIDIA Corporation & Affiliates. All rights reserved.
 
-Copyright (c) 2008-2025 NVIDIA Corporation. All rights reserved.
+PhysX is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+The complete license is provided in `LICENSE.md`.
 
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions
-are met:
- * Redistributions of source code must retain the above copyright
-   notice, this list of conditions and the following disclaimer.
- * Redistributions in binary form must reproduce the above copyright
-   notice, this list of conditions and the following disclaimer in the
-   documentation and/or other materials provided with the distribution.
- * Neither the name of NVIDIA CORPORATION nor the names of its
-   contributors may be used to endorse or promote products derived
-   from this software without specific prior written permission.
+## Introduction
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS "AS IS" AND ANY
-EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
-PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR
-CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
-EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
-PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR
-PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY
-OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Welcome to the NVIDIA PhysX SDK source code repository.
 
-</details>
+The NVIDIA PhysX SDK is a scalable multi-platform physics solution for CPUs and GPUs.  See [PhysX SDK on developer.nvidia.com](https://developer.nvidia.com/physx-sdk).
 
-Please also see license files in the root folder and in the respective subfolders.
+The [Release Notes](./CHANGELOG.md) contain updates pertaining to the latest version.
 
-## Content
+## User Guide and API Documentation
 
-This repo contains:
+The user guide and API documentation are available on [GitHub Pages](https://nvidia-omniverse.github.io/PhysX/physx/index.html). Please create an [Issue](https://github.com/NVIDIA-Omniverse/PhysX/issues/) if you find a documentation issue.
 
-| Directory | Description |
-|---|---|
-| [`ovphysx/`](ovphysx/) | ovphysx — C API with Python bindings for USD physics simulation with DLPack tensor interop (`pip install ovphysx`) |
-| [`physx/`](physx/) | PhysX SDK — real-time physics simulation engine |
-| [`omni/`](omni/) | Omniverse PhysX extensions for Kit-based applications |
+## Quick Start Instructions
 
-### ovphysx
+Platform specific environment and build information can be found in [documentation/platformreadme](./documentation/platformreadme).
 
-| Release | Compatibility |
-|---|---|
-| [0.6](https://github.com/NVIDIA-Omniverse/PhysX/tree/ovphysx-0.6.3) | PhysX SDK 5.11.0 |
-| [0.5](https://github.com/NVIDIA-Omniverse/PhysX/tree/ovphysx-0.5.11) | PhysX SDK 5.10.0 |
-| [0.4](https://github.com/NVIDIA-Omniverse/PhysX/tree/ovphysx-0.4.13) | PhysX SDK 5.9.0 |
-| [0.3](https://github.com/NVIDIA-Omniverse/PhysX/tree/ovphysx-0.3.7) | PhysX SDK 5.9.0 |
-| [0.2](https://github.com/NVIDIA-Omniverse/PhysX/tree/ovphysx-0.2.9) | PhysX SDK 5.8.0 |
+To begin, clone this repository onto your local drive.  Then change directory to physx/, run ./generate_projects.[bat|sh] and follow on-screen prompts.  This will let you select a platform specific solution to build.  You can then build from the generated solution/make file in the platform- and configuration-specific folders in the ``compiler`` folder.
 
-### Omniverse PhysX Extensions and PhysX SDK
+Note that the PhysX distribution downloads binary content, such as the PhysX GPU binaries, from Amazon CloudFront on demand, using the packman package manager.
 
-| Release | Compatibility |
-|---|---|
-| [110.1 and 5.9.0](https://github.com/NVIDIA-Omniverse/PhysX/tree/110.1-omni-and-physx-5.9.0) | [IsaacSim 6.0.0](https://github.com/isaac-sim/IsaacSim/tree/v6.0.0) |
-| [110.0 and 5.8.0](https://github.com/NVIDIA-Omniverse/PhysX/tree/110.0-omni-and-physx-5.8.0) | [IsaacSim 6.0.0-dev2](https://github.com/isaac-sim/IsaacSim/tree/v6.0.0-dev2) |
-| [109.0 and 5.7.0](https://github.com/NVIDIA-Omniverse/PhysX/tree/109.0-omni-and-physx-5.7.0) | [IsaacSim 6.0.0-dev](https://github.com/isaac-sim/IsaacSim/tree/v6.0.0-dev) |
-| [107.3 and 5.6.1](https://github.com/NVIDIA-Omniverse/PhysX/tree/107.3-omni-and-physx-5.6.1) | [IsaacSim 5.1.0](https://github.com/isaac-sim/IsaacSim/tree/v5.1.0) |
+## Acknowledgements
 
-Additional simulation libraries:
+This depot references packages of third party open source software copyright their respective owners.
+For copyright details, please refer to the license files included in the packages.
 
-| Directory | Description |
-|---|---|
-| [`blast/`](blast/) | Blast SDK — destruction and fracture simulation |
-| [`flow/`](flow/) | Flow SDK — fluid and fire simulation |
-
-## Support
-
-* Please use GitHub [Discussions](https://github.com/NVIDIA-Omniverse/PhysX/discussions/) for questions and comments.
-* GitHub [Issues](https://github.com/NVIDIA-Omniverse/PhysX/issues) should only be used for bug reports or documentation issues.
-* You can also ask questions in the NVIDIA Omniverse #physics [Discord Channel](https://discord.com/invite/XWQNJDNuaC).
+| Software                  | Copyright Holder                                                                    | Package                          |
+|---------------------------|-------------------------------------------------------------------------------------|----------------------------------|
+| CMake                     | Kitware, Inc. and Contributors                                                      | cmake                            |
+| LLVM                      | University of Illinois at Urbana-Champaign                                          | clang-physxmetadata              |
+| Visual Studio Locator     | Microsoft Corporation                                                               | VsWhere                          |
+| Freeglut                  | Pawel W. Olszta                                                                     | freeglut-windows                 |
+| Mesa 3-D graphics library | Brian Paul                                                                          | OpenGL                           |
+| RapidJSON                 | THL A29 Limited, a Tencent company, and Milo Yip<br>Alexander Chemeris (msinttypes) | rapidjson                        |
+| OpenGL Ext Wrangler Lib   | Nigel Stewart, Milan Ikits, Marcelo E. Magallon, Lev Povalahev                      | [SDK_ROOT]/snippets/graphics     |
