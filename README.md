@@ -1,41 +1,17 @@
-# NVIDIA PhysX SDK 5
+This is a cleaned-from-platform fork of the PhysX engine—a mirror clone of the QtQuick3DPhysics PhysX backend.
 
-Copyright (c) 2008-2026 NVIDIA Corporation & Affiliates. All rights reserved.
+All patches created by Qt are applied in this repository. The only difference is that this repository is suitable for any C++ project.
 
-PhysX is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
-The complete license is provided in `LICENSE.md`.
+If you want to integrate the PhysX engine into your project without any extra tricks, you can safely use this repository.
 
-## Introduction
+PhysX version 5.X
 
-Welcome to the NVIDIA PhysX SDK source code repository.
+---
 
-The NVIDIA PhysX SDK is a scalable multi-platform physics solution for CPUs and GPUs.  See [PhysX SDK on developer.nvidia.com](https://developer.nvidia.com/physx-sdk).
+### Useful Links
 
-The [Release Notes](./CHANGELOG.md) contain updates pertaining to the latest version.
-
-## User Guide and API Documentation
-
-The user guide and API documentation are available on [GitHub Pages](https://nvidia-omniverse.github.io/PhysX/physx/index.html). Please create an [Issue](https://github.com/NVIDIA-Omniverse/PhysX/issues/) if you find a documentation issue.
-
-## Quick Start Instructions
-
-Platform specific environment and build information can be found in [documentation/platformreadme](./documentation/platformreadme).
-
-To begin, clone this repository onto your local drive.  Then change directory to physx/, run ./generate_projects.[bat|sh] and follow on-screen prompts.  This will let you select a platform specific solution to build.  You can then build from the generated solution/make file in the platform- and configuration-specific folders in the ``compiler`` folder.
-
-Note that the PhysX distribution downloads binary content, such as the PhysX GPU binaries, from Amazon CloudFront on demand, using the packman package manager.
-
-## Acknowledgements
-
-This depot references packages of third party open source software copyright their respective owners.
-For copyright details, please refer to the license files included in the packages.
-
-| Software                  | Copyright Holder                                                                    | Package                          |
-|---------------------------|-------------------------------------------------------------------------------------|----------------------------------|
-| CMake                     | Kitware, Inc. and Contributors                                                      | cmake                            |
-| LLVM                      | University of Illinois at Urbana-Champaign                                          | clang-physxmetadata              |
-| Visual Studio Locator     | Microsoft Corporation                                                               | VsWhere                          |
-| Freeglut                  | Pawel W. Olszta                                                                     | freeglut-windows                 |
-| Mesa 3-D graphics library | Brian Paul                                                                          | OpenGL                           |
-| RapidJSON                 | THL A29 Limited, a Tencent company, and Milo Yip<br>Alexander Chemeris (msinttypes) | rapidjson                        |
-| OpenGL Ext Wrangler Lib   | Nigel Stewart, Milan Ikits, Marcelo E. Magallon, Lev Povalahev                      | [SDK_ROOT]/snippets/graphics     |
+* 📖 [NVIDIA PhysX 5 SDK Documentation](https://nvidia-omniverse.github.io/PhysX/physx/latest/#) — Latest API reference and integration guides.
+* 📋 [PhysX 5 Changelog](https://github.com/NVIDIA-Omniverse/PhysX/blob/main/physx/CHANGELOG.md) — Detailed list of updates and migration notes between 5.x versions.
+* 💻 [NVIDIA PhysX GitHub Repository](https://github.com/NvidiaOmniverse/PhysX) — Upstream source repository by NVIDIA.
+* 🌐 [NVIDIA GameWorks Developer Zone](https://developer.nvidia.com/physx-sdk) — NVIDIA PhysX overview and developer resources.
+* 📦 [QtQuick3DPhysics Repository](https://code.qt.io/cgit/qt/qtquick3dphysics.git/) — Upstream Qt repository from which this backend is derived.
