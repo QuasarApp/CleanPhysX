@@ -31,7 +31,7 @@ git submodule update --init --recursive
 Add the following lines to your CMakeLists.txt:
 
 ``` cmake
-add_subdirectory(third_party/physx)
+add_subdirectory(CleanPhysX)
 
 add_executable(my_project main.cpp)
 target_link_libraries(my_project PRIVATE CleanPhysX)
