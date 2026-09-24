@@ -34,7 +34,7 @@ Add the following lines to your CMakeLists.txt:
 add_subdirectory(third_party/physx)
 
 add_executable(my_project main.cpp)
-target_link_libraries(my_project PRIVATE PhysX)
+target_link_libraries(my_project PRIVATE CleanPhysX)
 ```
 
 ---
